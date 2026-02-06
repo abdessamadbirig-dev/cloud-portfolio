@@ -1,0 +1,62 @@
+:root{
+	--bg:#fff9f4;
+	--card:#fff;
+	--text:#2b2b2b;
+	--muted:#6b6b6b;
+	--accent:#8b5e34;
+	--accent-2:#c78b57;
+	--radius:10px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background:linear-gradient(180deg,var(--bg),#fff);color:var(--text);-webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+.site-header{background:transparent;position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--text)}
+.nav{display:flex;gap:8px}
+.nav-btn{border:none;background:transparent;padding:8px 10px;border-radius:8px;cursor:pointer}
+.actions{display:flex;gap:8px;align-items:center}
+.cart-btn{background:var(--accent);color:white;border:none;padding:8px 10px;border-radius:8px}
+
+.hero{padding:80px 0;background:linear-gradient(135deg,var(--accent-2),#ffeede);color:#2b1f17}
+.hero-inner{max-width:700px}
+.hero h1{font-size:2.2rem;margin:0 0 8px}
+.hero p{margin:0 0 16px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+
+.section{padding:48px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.card h3{margin:0 0 6px}
+.card p{margin:6px 0;color:var(--muted)}
+.price{font-weight:600;color:var(--accent)}
+.card-actions{display:flex;justify-content:flex-end}
+.add-btn{background:transparent;border:1px solid var(--accent);padding:6px 10px;border-radius:8px;color:var(--accent);cursor:pointer}
+
+.about p{max-width:700px}
+
+.site-footer{padding:24px 0;background:#fff3ea;text-align:center;color:var(--muted)}
+
+.toast{position:fixed;right:20px;bottom:20px;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;display:none}
+
+/* Forms */
+form label{display:block;margin-bottom:12px}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e7e7e7}
+
+/* mobile */
+.mobile-only{display:none}
+@media (max-width:700px){
+	.nav{display:none}
+	.mobile-only{display:block;margin-bottom:12px}
+	.hero h1{font-size:1.6rem}
+}
+
+/* Dark theme */
+:root.dark{--bg:#1e1b19;--card:#2a2624;--text:#f6efe8;--muted:#cfc6c1;--accent:#d9b89a;--accent-2:#b07a4b}
+:root.dark .site-footer{background:#241f1d}
+

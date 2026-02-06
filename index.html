@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Bean & Brew — Coffee</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="logo" href="#">Bean & Brew</a>
+			<nav class="nav">
+				<button class="nav-btn" data-filter="all">All</button>
+				<button class="nav-btn" data-filter="espresso">Espresso</button>
+				<button class="nav-btn" data-filter="brew">Brew</button>
+				<button class="nav-btn" data-filter="cold">Cold</button>
+			</nav>
+			<div class="actions">
+				<button id="themeToggle" aria-label="Toggle theme">🌙</button>
+				<button id="cartBtn" class="cart-btn" aria-label="Open cart">Cart (<span id="cartCount">0</span>)</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<h1>Wake up with better coffee</h1>
+				<p>Single-origin beans, crafted with care — delivered to your cup.</p>
+				<a href="#menu" class="btn">Explore Menu</a>
+			</div>
+		</section>
+
+		<section id="menu" class="container section">
+			<h2>Our Menu</h2>
+			<div class="filters mobile-only">
+				<select id="mobileFilter">
+					<option value="all">All</option>
+					<option value="espresso">Espresso</option>
+					<option value="brew">Brew</option>
+					<option value="cold">Cold</option>
+				</select>
+			</div>
+			<div id="cards" class="cards">
+				<article class="card" data-type="espresso">
+					<h3>Classic Espresso</h3>
+					<p class="price">$2.50</p>
+					<p>Rich crema, bold flavor — a classic shot.</p>
+					<div class="card-actions">
+						<button class="add-btn" data-name="Classic Espresso" data-price="2.5">Add</button>
+					</div>
+				</article>
+
+				<article class="card" data-type="brew">
+					<h3>Pour Over</h3>
+					<p class="price">$3.75</p>
+					<p>Delicate flavors, bright acidity, brewed to order.</p>
+					<div class="card-actions">
+						<button class="add-btn" data-name="Pour Over" data-price="3.75">Add</button>
+					</div>
+				</article>
+
+				<article class="card" data-type="cold">
+					<h3>Cold Brew</h3>
+					<p class="price">$4.00</p>
+					<p>Smooth, low-acid cold extraction — ready to chill.</p>
+					<div class="card-actions">
+						<button class="add-btn" data-name="Cold Brew" data-price="4.00">Add</button>
+					</div>
+				</article>
+
+				<article class="card" data-type="espresso">
+					<h3>Latte</h3>
+					<p class="price">$3.25</p>
+					<p>Silky milk with a balanced espresso base.</p>
+					<div class="card-actions">
+						<button class="add-btn" data-name="Latte" data-price="3.25">Add</button>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="container section about">
+			<h2>About Bean & Brew</h2>
+			<p>We partner with small farms to source transparent, sustainable coffee. Roasted weekly and shipped fresh.</p>
+		</section>
+
+		<section id="contact" class="container section contact">
+			<h2>Contact</h2>
+			<form id="contactForm">
+				<label>Name<input type="text" name="name" required></label>
+				<label>Email<input type="email" name="email" required></label>
+				<label>Message<textarea name="message" rows="4" required></textarea></label>
+				<button class="btn" type="submit">Send</button>
+			</form>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">© <span id="year"></span> Bean & Brew — Fresh coffee, delivered.</div>
+	</footer>
+
+	<div id="toast" class="toast" aria-live="polite"></div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
