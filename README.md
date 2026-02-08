@@ -22,8 +22,9 @@ This project demonstrates cloud computing concepts using Netlify:
 ## 🌐 Live Demo
 [View on Netlify](https://deft-daffodil-eb4f0c.netlify.app/)
 
-## 📸 Screenshots
-(Add screenshots of homepage + contact form + toast notification)
+
+<img width="1585" height="946" alt="screenshot of p" src="https://github.com/user-attachments/assets/75badf5c-ee0f-4aba-aa19-4f11151ddd02" />
+
 
 ## ⚙️ Cloud Concepts
 - **Serverless**: Contact form handled by Netlify Functions.
