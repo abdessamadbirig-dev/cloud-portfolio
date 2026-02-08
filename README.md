@@ -36,3 +36,10 @@ This project demonstrates cloud computing concepts using Netlify:
 - Add database (Supabase/Firebase) for storing submissions.
 - Integrate email service (SendGrid/EmailJS).
 - Add monitoring/logging.
+  
+## Architecture Diagram
+
+A simple diagram showing:
+GitHub → Netlify (Hosting + Functions) → User Browser
+
+This visually proves the cloud flow.
