@@ -1,15 +1,37 @@
-# Bean & Brew — Coffee Website
+# Cloud Portfolio — Serverless Contact Form
 
-This is a small static site showcasing a simple coffee shop landing page.
+## 🚀 Overview
+This project demonstrates cloud computing concepts using Netlify:
+- Static site hosting
+- Serverless functions (FaaS)
+- CI/CD pipeline with GitHub
 
-To view locally, open `index.html` in your browser.
+## 🛠 Tech Stack
+- HTML, CSS, JavaScript
+- Netlify Hosting
+- Netlify Functions
+- GitHub Actions (CI/CD)
 
-Files:
-- `index.html` — homepage
-- `style.css` — styles
-- `script.js` — interactive behavior (theme, filtering, cart toast)
+## 📂 Project Structure
+- `index.html` — frontend
+- `style.css` — styling
+- `script.js` — toast notifications
+- `netlify/functions/contact.js` — serverless backend
+- `netlify.toml` — Netlify config
 
-Next steps:
-- Add product images in an `assets/` folder.
-- Hook contact form to a backend or form service.
-- Deploy to GitHub Pages or any static host.
+## 🌐 Live Demo
+[View on Netlify](https://deft-daffodil-eb4f0c.netlify.app/)
+
+## 📸 Screenshots
+(Add screenshots of homepage + contact form + toast notification)
+
+## ⚙️ Cloud Concepts
+- **Serverless**: Contact form handled by Netlify Functions.
+- **CI/CD**: Auto‑deploy on GitHub push.
+- **Scalability**: Functions scale automatically.
+- **Configuration**: Managed via `netlify.toml`.
+
+## 🔮 Future Work
+- Add database (Supabase/Firebase) for storing submissions.
+- Integrate email service (SendGrid/EmailJS).
+- Add monitoring/logging.
