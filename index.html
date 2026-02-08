@@ -88,12 +88,11 @@
 
 		<section id="contact" class="container section contact">
 			<h2>Contact</h2>
-			<form id="contactForm">
-				<label>Name<input type="text" name="name" required></label>
-				<label>Email<input type="email" name="email" required></label>
-				<label>Message<textarea name="message" rows="4" required></textarea></label>
-				<button class="btn" type="submit">Send</button>
-			</form>
+			<form id="contactForm" method="POST" action="/.netlify/functions/contact">
+  <label>Email<input type="email" name="email" required></label>
+  <label>Message<textarea name="message" rows="4" required></textarea></label>
+  <button class="btn" type="submit">Send</button>
+</form>
 		</section>
 	</main>
 
