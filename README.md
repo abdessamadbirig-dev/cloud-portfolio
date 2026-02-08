@@ -37,9 +37,12 @@ This project demonstrates cloud computing concepts using Netlify:
 - Integrate email service (SendGrid/EmailJS).
 - Add monitoring/logging.
   
-## Architecture Diagram
+## 🏗 Architecture Diagram
 
-A simple diagram showing:
-GitHub → Netlify (Hosting + Functions) → User Browser
-
-This visually proves the cloud flow.
+```mermaid
+graph TD
+  A[GitHub Repo] -->|Push| B[Netlify CI/CD]
+  B --> C[Netlify Hosting]
+  B --> D[Netlify Functions]
+  C --> E[User Browser]
+  D --> E
