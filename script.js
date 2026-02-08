@@ -49,3 +49,32 @@ document.addEventListener('DOMContentLoaded',()=>{
 	}
 });
 
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name?.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  try {
+    const response = await fetch("/.netlify/functions/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    showToast(result.message || "Form submitted successfully!");
+  } catch (error) {
+    showToast("Something went wrong. Please try again.");
+  }
+});
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 3000);
+}

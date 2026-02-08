@@ -60,3 +60,22 @@ input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid
 :root.dark{--bg:#1e1b19;--card:#2a2624;--text:#f6efe8;--muted:#cfc6c1;--accent:#d9b89a;--accent-2:#b07a4b}
 :root.dark .site-footer{background:#241f1d}
 
+.toast {
+  visibility: hidden;
+  min-width: 200px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
